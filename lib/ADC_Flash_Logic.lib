@@ -1,0 +1,237 @@
+library (ADC_Flash_Logic) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1ohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 30;
+  slew_lower_threshold_pct_fall : 30;
+  slew_upper_threshold_pct_rise : 70;
+  slew_upper_threshold_pct_fall : 70;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 5.00;
+
+  type ("B") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 10;
+    bit_from : 9;
+    bit_to : 0;
+  }
+  type ("BN") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 10;
+    bit_from : 9;
+    bit_to : 0;
+  }
+  type ("Comp") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 7;
+    bit_from : 6;
+    bit_to : 0;
+  }
+  type ("CompN") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 7;
+    bit_from : 6;
+    bit_to : 0;
+  }
+
+  cell ("ADC_Flash_Logic") {
+    interface_timing : true;
+    pin("Samp") {
+      direction : input;
+      capacitance : 0.0101;
+    }
+    pin("clk") {
+      direction : input;
+      capacitance : 0.0188;
+    }
+    pin("eoc") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("vdd") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("vss") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    bus("B") {
+      bus_type : B;
+      direction : output;
+      capacitance : 0.0000;
+    pin("B[9]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[8]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[7]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[6]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[5]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[4]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[3]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[2]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[1]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("B[0]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    }
+    bus("BN") {
+      bus_type : BN;
+      direction : output;
+      capacitance : 0.0000;
+    pin("BN[9]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[8]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[7]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[6]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[5]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[4]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[3]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[2]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[1]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    pin("BN[0]") {
+      direction : output;
+      capacitance : 0.0000;
+    }
+    }
+    bus("Comp") {
+      bus_type : Comp;
+      direction : input;
+      capacitance : 0.0000;
+    pin("Comp[6]") {
+      direction : input;
+      capacitance : 0.0055;
+    }
+    pin("Comp[5]") {
+      direction : input;
+      capacitance : 0.0041;
+    }
+    pin("Comp[4]") {
+      direction : input;
+      capacitance : 0.0087;
+    }
+    pin("Comp[3]") {
+      direction : input;
+      capacitance : 0.0037;
+    }
+    pin("Comp[2]") {
+      direction : input;
+      capacitance : 0.0060;
+    }
+    pin("Comp[1]") {
+      direction : input;
+      capacitance : 0.0058;
+    }
+    pin("Comp[0]") {
+      direction : input;
+      capacitance : 0.0099;
+    }
+    }
+    bus("CompN") {
+      bus_type : CompN;
+      direction : input;
+      capacitance : 0.0000;
+    pin("CompN[6]") {
+      direction : input;
+      capacitance : 0.0055;
+    }
+    pin("CompN[5]") {
+      direction : input;
+      capacitance : 0.0041;
+    }
+    pin("CompN[4]") {
+      direction : input;
+      capacitance : 0.0049;
+    }
+    pin("CompN[3]") {
+      direction : input;
+      capacitance : 0.0044;
+    }
+    pin("CompN[2]") {
+      direction : input;
+      capacitance : 0.0059;
+    }
+    pin("CompN[1]") {
+      direction : input;
+      capacitance : 0.0151;
+    }
+    pin("CompN[0]") {
+      direction : input;
+      capacitance : 0.0100;
+    }
+    }
+  }
+
+}
