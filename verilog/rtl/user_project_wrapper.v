@@ -80,8 +80,9 @@ ADC_LogiCompilation mprj (
 
     // IO Pads
 
-    .io_in (io_in[12:0]),
-    .io_out(io_out[9:0])
+    .io_in (io_in[17:5]),
+    .io_out(io_out[27:18]),
+    .io_oeb(io_oeb[37:0])
 );
 
 endmodule	// user_project_wrapper

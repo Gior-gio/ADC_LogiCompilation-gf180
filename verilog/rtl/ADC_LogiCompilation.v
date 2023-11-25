@@ -1,4 +1,19 @@
 /// sta-blackbox
+// SPDX-FileCopyrightText: OnChip - UIS
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// SPDX-License-Identifier: Apache-2.0
+
 module ADC_LogiCompilation(
     `ifdef USE_POWER_PINS
         inout vdd,	// User area 1 1.8V supply
@@ -6,10 +21,15 @@ module ADC_LogiCompilation(
     `endif
     input [12:0] io_in,
     input wb_clk_i,
-    output [9:0] io_out          
+    output [9:0] io_out,
+    output [37:0] io_oeb
+              
 );
 
 //Signal assignation --------------------------------------------------------------------------------------------------------------
+
+assign io_oeb[12:0] = {13{1'b1}};
+assign io_oeb[37:13] = {25{1'b0}};
 
 wire [9:0] InputComp;
 assign InputComp =  io_in[9:0];

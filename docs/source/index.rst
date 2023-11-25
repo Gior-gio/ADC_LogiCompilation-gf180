@@ -79,7 +79,7 @@ Starting your project
    
        .. code:: bash
         
-    	git clone -b gfmpw-1c https://github.com/efabless/caravel_user_project.git <my_project>
+    	git clone -b gfmpw-0d https://github.com/efabless/caravel_user_project.git <my_project>
 	
 	cd <my_project>
 	
@@ -97,7 +97,7 @@ Starting your project
 	
 	export PDK_ROOT=$(pwd)/dependencies/pdks # you need to export this whenever you start a new shell
 
-	export PDK=gf180mcuD
+	export PDK=gf180mcuC
 
         make setup
 

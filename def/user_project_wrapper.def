@@ -5644,56 +5644,86 @@ SPECIALNETS 2 ;
       NEW Metal4 0 + SHAPE RING ( -16060 -13340 ) via4_5_6200_6200_4_4_1240_1240 ;
 END SPECIALNETS
 NETS 416 ;
-    - io_in[0] ( PIN io_in[0] ) ( mprj io_in[0] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5871600 73360 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5871600 73360 ) ( * 142800 )
-      NEW Metal3 ( 5719280 142800 0 ) ( 5871600 * )
-      NEW Metal3 ( 5871600 73360 ) Via3_HV
-      NEW Metal3 ( 5871600 142800 ) Via3_HV ;
-    - io_in[10] ( PIN io_in[10] ) ( mprj io_in[10] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5907440 4035920 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5907440 1293300 ) ( * 4035920 )
-      NEW Metal3 ( 126000 1287440 0 ) ( * 1293040 )
-      NEW Metal4 ( 126000 1293040 ) ( * 1293300 )
-      NEW Metal4 ( 126000 1293300 ) ( 127120 * )
-      NEW Metal5 ( 127120 1293300 ) ( 5907440 * )
-      NEW Metal3 ( 5907440 4035920 ) Via3_HV
-      NEW Metal4 ( 5907440 1293300 ) Via4_VH
-      NEW Metal3 ( 126000 1293040 ) Via3_HV
-      NEW Metal4 ( 127120 1293300 ) Via4_VH ;
-    - io_in[11] ( PIN io_in[11] ) ( mprj io_in[11] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5906320 4432400 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5906320 789300 ) ( * 4432400 )
-      NEW Metal4 ( 127120 785680 ) ( * 789300 )
-      NEW Metal5 ( 127120 789300 ) ( 5906320 * )
-      NEW Metal4 ( 5906320 789300 ) Via4_VH
-      NEW Metal3 ( 5906320 4432400 ) Via3_HV
-      NEW Metal3 ( 127120 785680 ) Via3_HV
-      NEW Metal4 ( 127120 789300 ) Via4_VH ;
-    - io_in[12] ( PIN io_in[12] ) ( mprj io_in[12] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5905200 4828880 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5905200 276300 ) ( * 4828880 )
-      NEW Metal3 ( 124880 276080 ) ( * 283920 0 )
-      NEW Metal4 ( 124880 276080 ) ( * 276300 )
-      NEW Metal5 ( 124880 276300 ) ( 5905200 * )
-      NEW Metal4 ( 5905200 276300 ) Via4_VH
-      NEW Metal3 ( 5905200 4828880 ) Via3_HV
-      NEW Metal3 ( 124880 276080 ) Via3_HV
-      NEW Metal4 ( 124880 276300 ) Via4_VH
-      NEW Metal4 ( 124880 276080 ) RECT ( -280 -440 280 0 )  ;
-    - io_in[13] ( PIN io_in[13] ) + USE SIGNAL ;
-    - io_in[14] ( PIN io_in[14] ) + USE SIGNAL ;
-    - io_in[15] ( PIN io_in[15] ) + USE SIGNAL ;
-    - io_in[16] ( PIN io_in[16] ) + USE SIGNAL ;
-    - io_in[17] ( PIN io_in[17] ) + USE SIGNAL ;
+    - io_in[0] ( PIN io_in[0] ) + USE SIGNAL ;
+    - io_in[10] ( PIN io_in[10] ) ( mprj io_in[5] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5719280 2387280 0 ) ( 5754000 * )
+      NEW Metal3 ( 5754000 4035920 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5754000 2387280 ) ( * 4035920 )
+      NEW Metal3 ( 5754000 2387280 ) Via3_HV
+      NEW Metal3 ( 5754000 4035920 ) Via3_HV ;
+    - io_in[11] ( PIN io_in[11] ) ( mprj io_in[6] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5913040 4432400 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5913040 2848720 ) ( * 4432400 )
+      NEW Metal3 ( 5719280 2846480 0 ) ( 5728800 * )
+      NEW Metal3 ( 5728800 2846480 ) ( * 2848720 )
+      NEW Metal3 ( 5728800 2848720 ) ( 5913040 * )
+      NEW Metal3 ( 5913040 2848720 ) Via3_HV
+      NEW Metal3 ( 5913040 4432400 ) Via3_HV ;
+    - io_in[12] ( PIN io_in[12] ) ( mprj io_in[7] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5719280 3213840 0 ) ( 5770800 * )
+      NEW Metal4 ( 5770800 3213840 ) ( * 4828880 )
+      NEW Metal3 ( 5770800 4828880 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5770800 3213840 ) Via3_HV
+      NEW Metal3 ( 5770800 4828880 ) Via3_HV ;
+    - io_in[13] ( PIN io_in[13] ) ( mprj io_in[8] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5910800 5225360 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5910800 3476700 ) ( * 5225360 )
+      NEW Metal3 ( 124880 3464720 0 ) ( * 3472560 )
+      NEW Metal4 ( 124880 3472560 ) ( * 3476700 )
+      NEW Metal5 ( 124880 3476700 ) ( 5910800 * )
+      NEW Metal3 ( 5910800 5225360 ) Via3_HV
+      NEW Metal4 ( 5910800 3476700 ) Via4_VH
+      NEW Metal3 ( 124880 3472560 ) Via3_HV
+      NEW Metal4 ( 124880 3476700 ) Via4_VH ;
+    - io_in[14] ( PIN io_in[14] ) ( mprj io_in[9] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5908560 5621840 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5908560 2855700 ) ( * 5621840 )
+      NEW Metal4 ( 127120 2855440 ) ( * 2855700 )
+      NEW Metal5 ( 127120 2855700 ) ( 5908560 * )
+      NEW Metal4 ( 5908560 2855700 ) Via4_VH
+      NEW Metal3 ( 5908560 5621840 ) Via3_HV
+      NEW Metal3 ( 127120 2855440 ) Via3_HV
+      NEW Metal4 ( 127120 2855700 ) Via4_VH
+      NEW Metal4 ( 127120 2855440 ) RECT ( -280 -400 280 0 )  ;
+    - io_in[15] ( PIN io_in[15] ) ( mprj io_in[10] ) + USE SIGNAL
+      + ROUTED Metal2 ( 5846960 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 5846960 2250900 ) ( * 5901840 )
+      NEW Metal4 ( 127120 2246160 ) ( * 2250900 )
+      NEW Metal5 ( 127120 2250900 ) ( 5846960 * )
+      NEW Metal2 ( 5846960 5901840 ) Via2_VH
+      NEW Metal3 ( 5846960 5901840 ) Via3_HV
+      NEW Metal4 ( 5846960 2250900 ) Via4_VH
+      NEW Metal3 ( 127120 2246160 ) Via3_HV
+      NEW Metal4 ( 127120 2250900 ) Via4_VH
+      NEW Metal3 ( 5846960 5901840 ) RECT ( 0 -280 660 280 )  ;
+    - io_in[16] ( PIN io_in[16] ) ( mprj io_in[11] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5174960 5901840 ) ( 5185040 * )
+      NEW Metal2 ( 5185040 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 5174960 1797300 ) ( * 5901840 )
+      NEW Metal3 ( 126000 1789200 0 ) ( * 1797040 )
+      NEW Metal4 ( 126000 1797040 ) ( * 1797300 )
+      NEW Metal4 ( 126000 1797300 ) ( 127120 * )
+      NEW Metal5 ( 127120 1797300 ) ( 5174960 * )
+      NEW Metal3 ( 5174960 5901840 ) Via3_HV
+      NEW Metal2 ( 5185040 5901840 ) Via2_VH
+      NEW Metal4 ( 5174960 1797300 ) Via4_VH
+      NEW Metal3 ( 126000 1797040 ) Via3_HV
+      NEW Metal4 ( 127120 1797300 ) Via4_VH ;
+    - io_in[17] ( PIN io_in[17] ) ( mprj io_in[12] ) + USE SIGNAL
+      + ROUTED Metal3 ( 4519760 5901840 ) ( 4523120 * )
+      NEW Metal2 ( 4523120 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 4519760 1343700 ) ( * 5901840 )
+      NEW Metal3 ( 123760 1332240 0 ) ( * 1341200 )
+      NEW Metal4 ( 123760 1341200 ) ( * 1343700 )
+      NEW Metal5 ( 123760 1343700 ) ( 4519760 * )
+      NEW Metal3 ( 4519760 5901840 ) Via3_HV
+      NEW Metal2 ( 4523120 5901840 ) Via2_VH
+      NEW Metal4 ( 4519760 1343700 ) Via4_VH
+      NEW Metal3 ( 123760 1341200 ) Via3_HV
+      NEW Metal4 ( 123760 1343700 ) Via4_VH ;
     - io_in[18] ( PIN io_in[18] ) + USE SIGNAL ;
     - io_in[19] ( PIN io_in[19] ) + USE SIGNAL ;
-    - io_in[1] ( PIN io_in[1] ) ( mprj io_in[1] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5871600 469840 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5871600 469840 ) ( * 581840 )
-      NEW Metal3 ( 5719280 581840 0 ) ( 5871600 * )
-      NEW Metal3 ( 5871600 469840 ) Via3_HV
-      NEW Metal3 ( 5871600 581840 ) Via3_HV ;
+    - io_in[1] ( PIN io_in[1] ) + USE SIGNAL ;
     - io_in[20] ( PIN io_in[20] ) + USE SIGNAL ;
     - io_in[21] ( PIN io_in[21] ) + USE SIGNAL ;
     - io_in[22] ( PIN io_in[22] ) + USE SIGNAL ;
@@ -5704,12 +5734,7 @@ NETS 416 ;
     - io_in[27] ( PIN io_in[27] ) + USE SIGNAL ;
     - io_in[28] ( PIN io_in[28] ) + USE SIGNAL ;
     - io_in[29] ( PIN io_in[29] ) + USE SIGNAL ;
-    - io_in[2] ( PIN io_in[2] ) ( mprj io_in[2] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5719280 1020880 0 ) ( 5755120 * )
-      NEW Metal4 ( 5755120 864080 ) ( * 1020880 )
-      NEW Metal3 ( 5755120 864080 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5755120 1020880 ) Via3_HV
-      NEW Metal3 ( 5755120 864080 ) Via3_HV ;
+    - io_in[2] ( PIN io_in[2] ) + USE SIGNAL ;
     - io_in[30] ( PIN io_in[30] ) + USE SIGNAL ;
     - io_in[31] ( PIN io_in[31] ) + USE SIGNAL ;
     - io_in[32] ( PIN io_in[32] ) + USE SIGNAL ;
@@ -5718,100 +5743,377 @@ NETS 416 ;
     - io_in[35] ( PIN io_in[35] ) + USE SIGNAL ;
     - io_in[36] ( PIN io_in[36] ) + USE SIGNAL ;
     - io_in[37] ( PIN io_in[37] ) + USE SIGNAL ;
-    - io_in[3] ( PIN io_in[3] ) ( mprj io_in[3] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5719280 1459920 0 ) ( 5755120 * )
-      NEW Metal4 ( 5755120 1260560 ) ( * 1459920 )
-      NEW Metal3 ( 5755120 1260560 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5755120 1459920 ) Via3_HV
-      NEW Metal3 ( 5755120 1260560 ) Via3_HV ;
-    - io_in[4] ( PIN io_in[4] ) ( mprj io_in[4] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5755120 1657040 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 1898960 0 ) ( 5755120 * )
-      NEW Metal4 ( 5755120 1657040 ) ( * 1898960 )
-      NEW Metal3 ( 5755120 1657040 ) Via3_HV
-      NEW Metal3 ( 5755120 1898960 ) Via3_HV ;
-    - io_in[5] ( PIN io_in[5] ) ( mprj io_in[5] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5719280 2338000 0 ) ( 5755120 * )
-      NEW Metal3 ( 5755120 2053520 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5755120 2053520 ) ( * 2338000 )
-      NEW Metal3 ( 5755120 2338000 ) Via3_HV
-      NEW Metal3 ( 5755120 2053520 ) Via3_HV ;
-    - io_in[6] ( PIN io_in[6] ) ( mprj io_in[6] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5756240 2450000 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 2777040 0 ) ( 5756240 * )
-      NEW Metal4 ( 5756240 2450000 ) ( * 2777040 )
-      NEW Metal3 ( 5756240 2450000 ) Via3_HV
-      NEW Metal3 ( 5756240 2777040 ) Via3_HV ;
-    - io_in[7] ( PIN io_in[7] ) ( mprj io_in[7] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5756240 2846480 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 3216080 0 ) ( 5756240 * )
-      NEW Metal4 ( 5756240 2846480 ) ( * 3216080 )
-      NEW Metal3 ( 5756240 2846480 ) Via3_HV
-      NEW Metal3 ( 5756240 3216080 ) Via3_HV ;
-    - io_in[8] ( PIN io_in[8] ) ( mprj io_in[8] ) + USE SIGNAL
-      + ROUTED Metal4 ( 5901840 3245200 ) ( * 3258900 )
-      NEW Metal3 ( 5901840 3245200 ) ( 5956720 * 0 )
-      NEW Metal3 ( 99120 3294480 ) ( 120400 * 0 )
-      NEW Metal4 ( 99120 3258900 ) ( * 3294480 )
-      NEW Metal5 ( 99120 3258900 ) ( 5901840 * )
-      NEW Metal4 ( 5901840 3258900 ) Via4_VH
-      NEW Metal3 ( 5901840 3245200 ) Via3_HV
-      NEW Metal3 ( 99120 3294480 ) Via3_HV
-      NEW Metal4 ( 99120 3258900 ) Via4_VH ;
-    - io_in[9] ( PIN io_in[9] ) ( mprj io_in[9] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5908560 3639440 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5908560 2301300 ) ( * 3639440 )
-      NEW Metal3 ( 123760 2290960 0 ) ( * 2298800 )
-      NEW Metal4 ( 123760 2298800 ) ( * 2301300 )
-      NEW Metal5 ( 123760 2301300 ) ( 5908560 * )
-      NEW Metal4 ( 5908560 2301300 ) Via4_VH
-      NEW Metal3 ( 5908560 3639440 ) Via3_HV
-      NEW Metal3 ( 123760 2298800 ) Via3_HV
-      NEW Metal4 ( 123760 2301300 ) Via4_VH ;
-    - io_oeb[0] ( PIN io_oeb[0] ) + USE SIGNAL ;
-    - io_oeb[10] ( PIN io_oeb[10] ) + USE SIGNAL ;
-    - io_oeb[11] ( PIN io_oeb[11] ) + USE SIGNAL ;
-    - io_oeb[12] ( PIN io_oeb[12] ) + USE SIGNAL ;
-    - io_oeb[13] ( PIN io_oeb[13] ) + USE SIGNAL ;
-    - io_oeb[14] ( PIN io_oeb[14] ) + USE SIGNAL ;
-    - io_oeb[15] ( PIN io_oeb[15] ) + USE SIGNAL ;
-    - io_oeb[16] ( PIN io_oeb[16] ) + USE SIGNAL ;
-    - io_oeb[17] ( PIN io_oeb[17] ) + USE SIGNAL ;
-    - io_oeb[18] ( PIN io_oeb[18] ) + USE SIGNAL ;
-    - io_oeb[19] ( PIN io_oeb[19] ) + USE SIGNAL ;
-    - io_oeb[1] ( PIN io_oeb[1] ) + USE SIGNAL ;
-    - io_oeb[20] ( PIN io_oeb[20] ) + USE SIGNAL ;
-    - io_oeb[21] ( PIN io_oeb[21] ) + USE SIGNAL ;
-    - io_oeb[22] ( PIN io_oeb[22] ) + USE SIGNAL ;
-    - io_oeb[23] ( PIN io_oeb[23] ) + USE SIGNAL ;
-    - io_oeb[24] ( PIN io_oeb[24] ) + USE SIGNAL ;
-    - io_oeb[25] ( PIN io_oeb[25] ) + USE SIGNAL ;
-    - io_oeb[26] ( PIN io_oeb[26] ) + USE SIGNAL ;
-    - io_oeb[27] ( PIN io_oeb[27] ) + USE SIGNAL ;
-    - io_oeb[28] ( PIN io_oeb[28] ) + USE SIGNAL ;
-    - io_oeb[29] ( PIN io_oeb[29] ) + USE SIGNAL ;
-    - io_oeb[2] ( PIN io_oeb[2] ) + USE SIGNAL ;
-    - io_oeb[30] ( PIN io_oeb[30] ) + USE SIGNAL ;
-    - io_oeb[31] ( PIN io_oeb[31] ) + USE SIGNAL ;
-    - io_oeb[32] ( PIN io_oeb[32] ) + USE SIGNAL ;
-    - io_oeb[33] ( PIN io_oeb[33] ) + USE SIGNAL ;
-    - io_oeb[34] ( PIN io_oeb[34] ) + USE SIGNAL ;
-    - io_oeb[35] ( PIN io_oeb[35] ) + USE SIGNAL ;
-    - io_oeb[36] ( PIN io_oeb[36] ) + USE SIGNAL ;
-    - io_oeb[37] ( PIN io_oeb[37] ) + USE SIGNAL ;
-    - io_oeb[3] ( PIN io_oeb[3] ) + USE SIGNAL ;
-    - io_oeb[4] ( PIN io_oeb[4] ) + USE SIGNAL ;
-    - io_oeb[5] ( PIN io_oeb[5] ) + USE SIGNAL ;
-    - io_oeb[6] ( PIN io_oeb[6] ) + USE SIGNAL ;
-    - io_oeb[7] ( PIN io_oeb[7] ) + USE SIGNAL ;
-    - io_oeb[8] ( PIN io_oeb[8] ) + USE SIGNAL ;
-    - io_oeb[9] ( PIN io_oeb[9] ) + USE SIGNAL ;
-    - io_out[0] ( PIN io_out[0] ) ( mprj io_out[0] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5754000 203280 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 362320 0 ) ( 5754000 * )
-      NEW Metal4 ( 5754000 203280 ) ( * 362320 )
-      NEW Metal3 ( 5754000 203280 ) Via3_HV
-      NEW Metal3 ( 5754000 362320 ) Via3_HV ;
+    - io_in[3] ( PIN io_in[3] ) + USE SIGNAL ;
+    - io_in[4] ( PIN io_in[4] ) + USE SIGNAL ;
+    - io_in[5] ( PIN io_in[5] ) ( mprj io_in[0] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5719280 91280 0 ) ( 5770800 * )
+      NEW Metal4 ( 5770800 91280 ) ( * 2053520 )
+      NEW Metal3 ( 5770800 2053520 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5770800 91280 ) Via3_HV
+      NEW Metal3 ( 5770800 2053520 ) Via3_HV ;
+    - io_in[6] ( PIN io_in[6] ) ( mprj io_in[1] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5908560 2450000 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5908560 550480 ) ( * 2450000 )
+      NEW Metal3 ( 5719280 550480 0 ) ( 5908560 * )
+      NEW Metal3 ( 5908560 550480 ) Via3_HV
+      NEW Metal3 ( 5908560 2450000 ) Via3_HV ;
+    - io_in[7] ( PIN io_in[7] ) ( mprj io_in[2] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5901840 2845360 ) ( * 2846480 )
+      NEW Metal3 ( 5901840 2846480 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5719280 1009680 0 ) ( 5821200 * )
+      NEW Metal3 ( 5821200 2845360 ) ( 5901840 * )
+      NEW Metal4 ( 5821200 1009680 ) ( * 2845360 )
+      NEW Metal3 ( 5821200 1009680 ) Via3_HV
+      NEW Metal3 ( 5821200 2845360 ) Via3_HV ;
+    - io_in[8] ( PIN io_in[8] ) ( mprj io_in[3] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5719280 1468880 0 ) ( 5838000 * )
+      NEW Metal4 ( 5838000 1468880 ) ( * 3242960 )
+      NEW Metal3 ( 5838000 3242960 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5838000 1468880 ) Via3_HV
+      NEW Metal3 ( 5838000 3242960 ) Via3_HV ;
+    - io_in[9] ( PIN io_in[9] ) ( mprj io_in[4] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5911920 3639440 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5911920 1928080 ) ( * 3639440 )
+      NEW Metal3 ( 5719280 1928080 0 ) ( 5911920 * )
+      NEW Metal3 ( 5911920 1928080 ) Via3_HV
+      NEW Metal3 ( 5911920 3639440 ) Via3_HV ;
+    - io_oeb[0] ( PIN io_oeb[0] ) ( mprj io_oeb[0] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5863760 336560 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5863760 274960 ) ( * 336560 )
+      NEW Metal3 ( 5719280 274960 0 ) ( 5863760 * )
+      NEW Metal3 ( 5863760 274960 ) Via3_HV
+      NEW Metal3 ( 5863760 336560 ) Via3_HV ;
+    - io_oeb[10] ( PIN io_oeb[10] ) ( mprj io_oeb[10] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5909680 4301360 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5909680 2099700 ) ( * 4301360 )
+      NEW Metal3 ( 126000 2093840 0 ) ( * 2099440 )
+      NEW Metal4 ( 126000 2099440 ) ( * 2099700 )
+      NEW Metal4 ( 126000 2099700 ) ( 127120 * )
+      NEW Metal5 ( 127120 2099700 ) ( 5909680 * )
+      NEW Metal4 ( 5909680 2099700 ) Via4_VH
+      NEW Metal3 ( 5909680 4301360 ) Via3_HV
+      NEW Metal3 ( 126000 2099440 ) Via3_HV
+      NEW Metal4 ( 127120 2099700 ) Via4_VH ;
+    - io_oeb[11] ( PIN io_oeb[11] ) ( mprj io_oeb[11] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5907440 4696720 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5907440 1646100 ) ( * 4696720 )
+      NEW Metal3 ( 123760 1636880 0 ) ( * 1643600 )
+      NEW Metal4 ( 123760 1643600 ) ( * 1646100 )
+      NEW Metal5 ( 123760 1646100 ) ( 5907440 * )
+      NEW Metal4 ( 5907440 1646100 ) Via4_VH
+      NEW Metal3 ( 5907440 4696720 ) Via3_HV
+      NEW Metal3 ( 123760 1643600 ) Via3_HV
+      NEW Metal4 ( 123760 1646100 ) Via4_VH ;
+    - io_oeb[12] ( PIN io_oeb[12] ) ( mprj io_oeb[12] ) + USE SIGNAL
+      + ROUTED Metal3 ( 90160 1179920 ) ( 120400 * 0 )
+      NEW Metal4 ( 90160 1179920 ) ( * 5093200 )
+      NEW Metal3 ( 90160 5093200 ) ( 5956720 * 0 )
+      NEW Metal3 ( 90160 1179920 ) Via3_HV
+      NEW Metal3 ( 90160 5093200 ) Via3_HV ;
+    - io_oeb[13] ( PIN io_oeb[13] ) ( mprj io_oeb[13] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5906320 5489680 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5906320 890100 ) ( * 5489680 )
+      NEW Metal3 ( 123760 875280 0 ) ( * 884240 )
+      NEW Metal4 ( 123760 884240 ) ( * 890100 )
+      NEW Metal5 ( 123760 890100 ) ( 5906320 * )
+      NEW Metal3 ( 5906320 5489680 ) Via3_HV
+      NEW Metal4 ( 5906320 890100 ) Via4_VH
+      NEW Metal3 ( 123760 884240 ) Via3_HV
+      NEW Metal4 ( 123760 890100 ) Via4_VH ;
+    - io_oeb[14] ( PIN io_oeb[14] ) ( mprj io_oeb[14] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5905200 5886160 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5905200 569700 ) ( * 5886160 )
+      NEW Metal4 ( 127120 569700 ) ( * 570640 )
+      NEW Metal5 ( 127120 569700 ) ( 5905200 * )
+      NEW Metal3 ( 5905200 5886160 ) Via3_HV
+      NEW Metal4 ( 5905200 569700 ) Via4_VH
+      NEW Metal3 ( 127120 570640 ) Via3_HV
+      NEW Metal4 ( 127120 569700 ) Via4_VH ;
+    - io_oeb[15] ( PIN io_oeb[15] ) ( mprj io_oeb[15] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5393360 5901840 ) ( 5405680 * )
+      NEW Metal2 ( 5405680 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 5393360 267300 ) ( * 5901840 )
+      NEW Metal4 ( 127120 266000 ) ( * 267300 )
+      NEW Metal5 ( 127120 267300 ) ( 5393360 * )
+      NEW Metal4 ( 5393360 267300 ) Via4_VH
+      NEW Metal3 ( 5393360 5901840 ) Via3_HV
+      NEW Metal2 ( 5405680 5901840 ) Via2_VH
+      NEW Metal3 ( 127120 266000 ) Via3_HV
+      NEW Metal4 ( 127120 267300 ) Via4_VH ;
+    - io_oeb[16] ( PIN io_oeb[16] ) ( mprj io_oeb[16] ) + USE SIGNAL
+      + ROUTED Metal3 ( 4746000 5901840 ) ( 4753840 * )
+      NEW Metal2 ( 4746000 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 4753840 368100 ) ( * 5901840 )
+      NEW Metal4 ( 5712560 366800 ) ( * 368100 )
+      NEW Metal5 ( 4753840 368100 ) ( 5712560 * )
+      NEW Metal3 ( 4753840 5901840 ) Via3_HV
+      NEW Metal2 ( 4746000 5901840 ) Via2_VH
+      NEW Metal4 ( 4753840 368100 ) Via4_VH
+      NEW Metal4 ( 5712560 368100 ) Via4_VH
+      NEW Metal3 ( 5712560 366800 ) Via3_HV ;
+    - io_oeb[17] ( PIN io_oeb[17] ) ( mprj io_oeb[17] ) + USE SIGNAL
+      + ROUTED Metal5 ( 5717040 836100 ) ( * 839700 )
+      NEW Metal4 ( 5717040 831600 ) ( * 836100 )
+      NEW Metal3 ( 5717040 826000 0 ) ( * 831600 )
+      NEW Metal3 ( 4084080 5901840 ) ( 4098640 * )
+      NEW Metal2 ( 4084080 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 4098640 839700 ) ( * 5901840 )
+      NEW Metal5 ( 4098640 839700 ) ( 5717040 * )
+      NEW Metal4 ( 5717040 836100 ) Via4_VH
+      NEW Metal3 ( 5717040 831600 ) Via3_HV
+      NEW Metal3 ( 4098640 5901840 ) Via3_HV
+      NEW Metal2 ( 4084080 5901840 ) Via2_VH
+      NEW Metal4 ( 4098640 839700 ) Via4_VH ;
+    - io_oeb[18] ( PIN io_oeb[18] ) ( mprj io_oeb[18] ) + USE SIGNAL
+      + ROUTED Metal5 ( 5714800 1289700 ) ( * 1293300 )
+      NEW Metal4 ( 5714800 1289680 ) ( * 1289700 )
+      NEW Metal3 ( 5714800 1285200 0 ) ( * 1289680 )
+      NEW Metal3 ( 3422160 5901840 ) ( 3426640 * )
+      NEW Metal2 ( 3422160 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 3426640 1293300 ) ( * 5901840 )
+      NEW Metal5 ( 3426640 1293300 ) ( 5714800 * )
+      NEW Metal4 ( 5714800 1289700 ) Via4_VH
+      NEW Metal3 ( 5714800 1289680 ) Via3_HV
+      NEW Metal3 ( 3426640 5901840 ) Via3_HV
+      NEW Metal2 ( 3422160 5901840 ) Via2_VH
+      NEW Metal4 ( 3426640 1293300 ) Via4_VH
+      NEW Metal4 ( 5714800 1289700 ) RECT ( -280 0 280 640 )  ;
+    - io_oeb[19] ( PIN io_oeb[19] ) ( mprj io_oeb[19] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5712560 1744400 ) ( * 1745100 )
+      NEW Metal3 ( 2760240 5901840 ) ( 2771440 * )
+      NEW Metal2 ( 2760240 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 2771440 1746900 ) ( * 5901840 )
+      NEW Metal5 ( 2771440 1746900 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 1745100 ) ( * 1746900 )
+      NEW Metal5 ( 5493600 1745100 ) ( 5712560 * )
+      NEW Metal4 ( 5712560 1745100 ) Via4_VH
+      NEW Metal3 ( 5712560 1744400 ) Via3_HV
+      NEW Metal3 ( 2771440 5901840 ) Via3_HV
+      NEW Metal2 ( 2760240 5901840 ) Via2_VH
+      NEW Metal4 ( 2771440 1746900 ) Via4_VH ;
+    - io_oeb[1] ( PIN io_oeb[1] ) ( mprj io_oeb[1] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5719280 734160 0 ) ( 5956720 * 0 ) ;
+    - io_oeb[20] ( PIN io_oeb[20] ) ( mprj io_oeb[20] ) + USE SIGNAL
+      + ROUTED Metal2 ( 2098320 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 2098320 5846400 ) ( * 5901840 )
+      NEW Metal4 ( 2098320 5846400 ) ( 2099440 * )
+      NEW Metal4 ( 2099440 2216700 ) ( * 5846400 )
+      NEW Metal5 ( 5715920 2214900 ) ( * 2216700 )
+      NEW Metal4 ( 5715920 2209200 ) ( * 2214900 )
+      NEW Metal3 ( 5715920 2203600 0 ) ( * 2209200 )
+      NEW Metal5 ( 2099440 2216700 ) ( 5715920 * )
+      NEW Metal2 ( 2098320 5901840 ) Via2_VH
+      NEW Metal3 ( 2098320 5901840 ) Via3_HV
+      NEW Metal4 ( 2099440 2216700 ) Via4_VH
+      NEW Metal4 ( 5715920 2214900 ) Via4_VH
+      NEW Metal3 ( 5715920 2209200 ) Via3_HV
+      NEW Metal3 ( 2098320 5901840 ) RECT ( -660 -280 0 280 )  ;
+    - io_oeb[21] ( PIN io_oeb[21] ) ( mprj io_oeb[21] ) + USE SIGNAL
+      + ROUTED Metal3 ( 1436400 5901840 ) ( 1444240 * )
+      NEW Metal2 ( 1436400 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 5714800 2667280 ) ( * 2668500 )
+      NEW Metal3 ( 5714800 2662800 0 ) ( * 2667280 )
+      NEW Metal4 ( 1444240 2670300 ) ( * 5901840 )
+      NEW Metal5 ( 1444240 2670300 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 2668500 ) ( * 2670300 )
+      NEW Metal5 ( 5493600 2668500 ) ( 5714800 * )
+      NEW Metal4 ( 1444240 2670300 ) Via4_VH
+      NEW Metal3 ( 1444240 5901840 ) Via3_HV
+      NEW Metal2 ( 1436400 5901840 ) Via2_VH
+      NEW Metal4 ( 5714800 2668500 ) Via4_VH
+      NEW Metal3 ( 5714800 2667280 ) Via3_HV ;
+    - io_oeb[22] ( PIN io_oeb[22] ) ( mprj io_oeb[22] ) + USE SIGNAL
+      + ROUTED Metal3 ( 774480 5901840 ) ( 789040 * )
+      NEW Metal2 ( 774480 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 5712560 3122000 ) ( * 3122100 )
+      NEW Metal4 ( 789040 3123900 ) ( * 5901840 )
+      NEW Metal5 ( 789040 3123900 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 3122100 ) ( * 3123900 )
+      NEW Metal5 ( 5493600 3122100 ) ( 5712560 * )
+      NEW Metal4 ( 789040 3123900 ) Via4_VH
+      NEW Metal3 ( 789040 5901840 ) Via3_HV
+      NEW Metal2 ( 774480 5901840 ) Via2_VH
+      NEW Metal4 ( 5712560 3122100 ) Via4_VH
+      NEW Metal3 ( 5712560 3122000 ) Via3_HV
+      NEW Metal4 ( 5712560 3122100 ) RECT ( -280 0 280 560 )  ;
+    - io_oeb[23] ( PIN io_oeb[23] ) ( mprj io_oeb[23] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5712560 3489300 ) ( * 3489360 )
+      NEW Metal3 ( 112560 5901840 ) ( 117040 * )
+      NEW Metal2 ( 112560 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 117040 3492900 ) ( * 5901840 )
+      NEW Metal5 ( 117040 3492900 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 3489300 ) ( * 3492900 )
+      NEW Metal5 ( 5493600 3489300 ) ( 5712560 * )
+      NEW Metal4 ( 5712560 3489300 ) Via4_VH
+      NEW Metal3 ( 5712560 3489360 ) Via3_HV
+      NEW Metal3 ( 117040 5901840 ) Via3_HV
+      NEW Metal2 ( 112560 5901840 ) Via2_VH
+      NEW Metal4 ( 117040 3492900 ) Via4_VH
+      NEW Metal4 ( 5712560 3489300 ) RECT ( -280 -600 280 0 )  ;
+    - io_oeb[24] ( PIN io_oeb[24] ) ( mprj io_oeb[24] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 5589360 0 ) ( 47600 * )
+      NEW Metal4 ( 47600 3007760 ) ( * 5589360 )
+      NEW Metal3 ( 47600 3007760 ) ( 120400 * 0 )
+      NEW Metal3 ( 47600 3007760 ) Via3_HV
+      NEW Metal3 ( 47600 5589360 ) Via3_HV ;
+    - io_oeb[25] ( PIN io_oeb[25] ) ( mprj io_oeb[25] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 5166000 0 ) ( 45360 * )
+      NEW Metal4 ( 45360 2398480 ) ( * 5166000 )
+      NEW Metal3 ( 45360 2398480 ) ( 120400 * 0 )
+      NEW Metal3 ( 45360 2398480 ) Via3_HV
+      NEW Metal3 ( 45360 5166000 ) Via3_HV ;
+    - io_oeb[26] ( PIN io_oeb[26] ) ( mprj io_oeb[26] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 4742640 0 ) ( 44240 * )
+      NEW Metal4 ( 44240 1941520 ) ( * 4742640 )
+      NEW Metal3 ( 44240 1941520 ) ( 120400 * 0 )
+      NEW Metal3 ( 44240 1941520 ) Via3_HV
+      NEW Metal3 ( 44240 4742640 ) Via3_HV ;
+    - io_oeb[27] ( PIN io_oeb[27] ) ( mprj io_oeb[27] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 4319280 0 ) ( 43120 * )
+      NEW Metal4 ( 43120 1484560 ) ( * 4319280 )
+      NEW Metal3 ( 43120 1484560 ) ( 120400 * 0 )
+      NEW Metal3 ( 43120 1484560 ) Via3_HV
+      NEW Metal3 ( 43120 4319280 ) Via3_HV ;
+    - io_oeb[28] ( PIN io_oeb[28] ) ( mprj io_oeb[28] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 3895920 0 ) ( 42000 * )
+      NEW Metal4 ( 42000 1027600 ) ( * 3895920 )
+      NEW Metal3 ( 42000 1027600 ) ( 120400 * 0 )
+      NEW Metal3 ( 42000 1027600 ) Via3_HV
+      NEW Metal3 ( 42000 3895920 ) Via3_HV ;
+    - io_oeb[29] ( PIN io_oeb[29] ) ( mprj io_oeb[29] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 3472560 0 ) ( 46480 * )
+      NEW Metal4 ( 46480 722960 ) ( * 3472560 )
+      NEW Metal3 ( 46480 722960 ) ( 120400 * 0 )
+      NEW Metal3 ( 46480 722960 ) Via3_HV
+      NEW Metal3 ( 46480 3472560 ) Via3_HV ;
+    - io_oeb[2] ( PIN io_oeb[2] ) ( mprj io_oeb[2] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5871600 1130640 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5871600 1130640 ) ( * 1193360 )
+      NEW Metal3 ( 5719280 1193360 0 ) ( 5871600 * )
+      NEW Metal3 ( 5871600 1193360 ) Via3_HV
+      NEW Metal3 ( 5871600 1130640 ) Via3_HV ;
+    - io_oeb[30] ( PIN io_oeb[30] ) ( mprj io_oeb[30] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 3049200 0 ) ( 75600 * )
+      NEW Metal4 ( 75600 418320 ) ( * 3049200 )
+      NEW Metal3 ( 75600 418320 ) ( 120400 * 0 )
+      NEW Metal3 ( 75600 3049200 ) Via3_HV
+      NEW Metal3 ( 75600 418320 ) Via3_HV ;
+    - io_oeb[31] ( PIN io_oeb[31] ) ( mprj io_oeb[31] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 2625840 0 ) ( 76720 * )
+      NEW Metal4 ( 76720 113680 ) ( * 2625840 )
+      NEW Metal3 ( 76720 113680 ) ( 120400 * 0 )
+      NEW Metal3 ( 76720 2625840 ) Via3_HV
+      NEW Metal3 ( 76720 113680 ) Via3_HV ;
+    - io_oeb[32] ( PIN io_oeb[32] ) ( mprj io_oeb[32] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5714800 464240 ) ( * 467100 )
+      NEW Metal3 ( 5714800 458640 0 ) ( * 464240 )
+      NEW Metal3 ( 3920 2202480 0 ) ( 45360 * )
+      NEW Metal4 ( 45360 468900 ) ( * 2202480 )
+      NEW Metal5 ( 45360 468900 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 467100 ) ( * 468900 )
+      NEW Metal5 ( 5493600 467100 ) ( 5714800 * )
+      NEW Metal4 ( 45360 468900 ) Via4_VH
+      NEW Metal4 ( 5714800 467100 ) Via4_VH
+      NEW Metal3 ( 5714800 464240 ) Via3_HV
+      NEW Metal3 ( 45360 2202480 ) Via3_HV ;
+    - io_oeb[33] ( PIN io_oeb[33] ) ( mprj io_oeb[33] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5712560 917840 ) ( * 918900 )
+      NEW Metal3 ( 3920 1779120 0 ) ( 44240 * )
+      NEW Metal4 ( 44240 922500 ) ( * 1779120 )
+      NEW Metal5 ( 44240 922500 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 918900 ) ( * 922500 )
+      NEW Metal5 ( 5493600 918900 ) ( 5712560 * )
+      NEW Metal4 ( 44240 922500 ) Via4_VH
+      NEW Metal4 ( 5712560 918900 ) Via4_VH
+      NEW Metal3 ( 5712560 917840 ) Via3_HV
+      NEW Metal3 ( 44240 1779120 ) Via3_HV ;
+    - io_oeb[34] ( PIN io_oeb[34] ) ( mprj io_oeb[34] ) + USE SIGNAL
+      + ROUTED Metal4 ( 43120 1355760 ) ( * 1356300 )
+      NEW Metal3 ( 3920 1355760 0 ) ( 43120 * )
+      NEW Metal4 ( 5714800 1356300 ) ( * 1371440 )
+      NEW Metal3 ( 5714800 1371440 ) ( * 1377040 0 )
+      NEW Metal5 ( 43120 1356300 ) ( 5714800 * )
+      NEW Metal4 ( 43120 1356300 ) Via4_VH
+      NEW Metal3 ( 43120 1355760 ) Via3_HV
+      NEW Metal4 ( 5714800 1356300 ) Via4_VH
+      NEW Metal3 ( 5714800 1371440 ) Via3_HV ;
+    - io_oeb[35] ( PIN io_oeb[35] ) ( mprj io_oeb[35] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 934640 0 ) ( 42000 * )
+      NEW Metal4 ( 42000 934640 ) ( * 936900 )
+      NEW Metal5 ( 42000 936900 ) ( 5748400 * )
+      NEW Metal3 ( 5719280 1836240 0 ) ( 5748400 * )
+      NEW Metal4 ( 5748400 936900 ) ( * 1836240 )
+      NEW Metal3 ( 42000 934640 ) Via3_HV
+      NEW Metal4 ( 42000 936900 ) Via4_VH
+      NEW Metal4 ( 5748400 936900 ) Via4_VH
+      NEW Metal3 ( 5748400 1836240 ) Via3_HV ;
+    - io_oeb[36] ( PIN io_oeb[36] ) ( mprj io_oeb[36] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 511280 0 ) ( 42000 * )
+      NEW Metal4 ( 42000 511280 ) ( * 519300 )
+      NEW Metal5 ( 42000 519300 ) ( 5747280 * )
+      NEW Metal3 ( 5719280 2295440 0 ) ( 5747280 * )
+      NEW Metal4 ( 5747280 519300 ) ( * 2295440 )
+      NEW Metal3 ( 42000 511280 ) Via3_HV
+      NEW Metal4 ( 42000 519300 ) Via4_VH
+      NEW Metal4 ( 5747280 519300 ) Via4_VH
+      NEW Metal3 ( 5747280 2295440 ) Via3_HV ;
+    - io_oeb[37] ( PIN io_oeb[37] ) ( mprj io_oeb[37] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 87920 0 ) ( 42000 * )
+      NEW Metal4 ( 42000 87920 ) ( * 96300 )
+      NEW Metal5 ( 42000 96300 ) ( 5749520 * )
+      NEW Metal3 ( 5719280 2754640 0 ) ( 5749520 * )
+      NEW Metal4 ( 5749520 96300 ) ( * 2754640 )
+      NEW Metal3 ( 42000 87920 ) Via3_HV
+      NEW Metal4 ( 42000 96300 ) Via4_VH
+      NEW Metal4 ( 5749520 96300 ) Via4_VH
+      NEW Metal3 ( 5749520 2754640 ) Via3_HV ;
+    - io_oeb[3] ( PIN io_oeb[3] ) ( mprj io_oeb[3] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5909680 1527120 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5909680 1527120 ) ( * 1652560 )
+      NEW Metal3 ( 5719280 1652560 0 ) ( 5909680 * )
+      NEW Metal3 ( 5909680 1652560 ) Via3_HV
+      NEW Metal3 ( 5909680 1527120 ) Via3_HV ;
+    - io_oeb[4] ( PIN io_oeb[4] ) ( mprj io_oeb[4] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5754000 1921360 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5719280 2111760 0 ) ( 5754000 * )
+      NEW Metal4 ( 5754000 1921360 ) ( * 2111760 )
+      NEW Metal3 ( 5754000 1921360 ) Via3_HV
+      NEW Metal3 ( 5754000 2111760 ) Via3_HV ;
+    - io_oeb[5] ( PIN io_oeb[5] ) ( mprj io_oeb[5] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5755120 2318960 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5719280 2570960 0 ) ( 5755120 * )
+      NEW Metal4 ( 5755120 2318960 ) ( * 2570960 )
+      NEW Metal3 ( 5755120 2318960 ) Via3_HV
+      NEW Metal3 ( 5755120 2570960 ) Via3_HV ;
+    - io_oeb[6] ( PIN io_oeb[6] ) ( mprj io_oeb[6] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5719280 3030160 0 ) ( 5770800 * )
+      NEW Metal3 ( 5770800 2714320 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5770800 2714320 ) ( * 3030160 )
+      NEW Metal3 ( 5770800 3030160 ) Via3_HV
+      NEW Metal3 ( 5770800 2714320 ) Via3_HV ;
+    - io_oeb[7] ( PIN io_oeb[7] ) ( mprj io_oeb[7] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5804400 3110800 ) ( 5956720 * 0 )
+      NEW Metal3 ( 5719280 3397520 0 ) ( 5804400 * )
+      NEW Metal4 ( 5804400 3110800 ) ( * 3397520 )
+      NEW Metal3 ( 5804400 3110800 ) Via3_HV
+      NEW Metal3 ( 5804400 3397520 ) Via3_HV ;
+    - io_oeb[8] ( PIN io_oeb[8] ) ( mprj io_oeb[8] ) + USE SIGNAL
+      + ROUTED Metal3 ( 5904080 3507280 ) ( 5956720 * 0 )
+      NEW Metal4 ( 5904080 3174300 ) ( * 3507280 )
+      NEW Metal3 ( 124880 3160080 0 ) ( * 3170160 )
+      NEW Metal4 ( 124880 3170160 ) ( * 3174300 )
+      NEW Metal5 ( 124880 3174300 ) ( 5904080 * )
+      NEW Metal3 ( 5904080 3507280 ) Via3_HV
+      NEW Metal4 ( 5904080 3174300 ) Via4_VH
+      NEW Metal3 ( 124880 3170160 ) Via3_HV
+      NEW Metal4 ( 124880 3174300 ) Via4_VH ;
+    - io_oeb[9] ( PIN io_oeb[9] ) ( mprj io_oeb[9] ) + USE SIGNAL
+      + ROUTED Metal3 ( 99120 2550800 ) ( 120400 * 0 )
+      NEW Metal4 ( 99120 2550800 ) ( * 3903760 )
+      NEW Metal3 ( 99120 3903760 ) ( 5956720 * 0 )
+      NEW Metal3 ( 99120 2550800 ) Via3_HV
+      NEW Metal3 ( 99120 3903760 ) Via3_HV ;
+    - io_out[0] ( PIN io_out[0] ) + USE SIGNAL ;
     - io_out[10] ( PIN io_out[10] ) + USE SIGNAL ;
     - io_out[11] ( PIN io_out[11] ) + USE SIGNAL ;
     - io_out[12] ( PIN io_out[12] ) + USE SIGNAL ;
@@ -5820,30 +6122,128 @@ NETS 416 ;
     - io_out[15] ( PIN io_out[15] ) + USE SIGNAL ;
     - io_out[16] ( PIN io_out[16] ) + USE SIGNAL ;
     - io_out[17] ( PIN io_out[17] ) + USE SIGNAL ;
-    - io_out[18] ( PIN io_out[18] ) + USE SIGNAL ;
-    - io_out[19] ( PIN io_out[19] ) + USE SIGNAL ;
-    - io_out[1] ( PIN io_out[1] ) ( mprj io_out[1] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5754000 599760 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 801360 0 ) ( 5754000 * )
-      NEW Metal4 ( 5754000 599760 ) ( * 801360 )
-      NEW Metal3 ( 5754000 599760 ) Via3_HV
-      NEW Metal3 ( 5754000 801360 ) Via3_HV ;
-    - io_out[20] ( PIN io_out[20] ) + USE SIGNAL ;
-    - io_out[21] ( PIN io_out[21] ) + USE SIGNAL ;
-    - io_out[22] ( PIN io_out[22] ) + USE SIGNAL ;
-    - io_out[23] ( PIN io_out[23] ) + USE SIGNAL ;
-    - io_out[24] ( PIN io_out[24] ) + USE SIGNAL ;
-    - io_out[25] ( PIN io_out[25] ) + USE SIGNAL ;
-    - io_out[26] ( PIN io_out[26] ) + USE SIGNAL ;
-    - io_out[27] ( PIN io_out[27] ) + USE SIGNAL ;
+    - io_out[18] ( PIN io_out[18] ) ( mprj io_out[0] ) + USE SIGNAL
+      + ROUTED Metal2 ( 3642800 5905200 ) ( * 5956720 0 )
+      NEW Metal3 ( 3642800 5905200 ) ( 5729360 * )
+      NEW Metal3 ( 5719280 183120 0 ) ( 5729360 * )
+      NEW Metal2 ( 5729360 183120 ) ( * 5905200 )
+      NEW Metal2 ( 3642800 5905200 ) Via2_VH
+      NEW Metal2 ( 5729360 5905200 ) Via2_VH
+      NEW Metal2 ( 5729360 183120 ) Via2_VH ;
+    - io_out[19] ( PIN io_out[19] ) ( mprj io_out[1] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5714800 647920 ) ( * 648900 )
+      NEW Metal3 ( 5714800 642320 0 ) ( * 647920 )
+      NEW Metal3 ( 2980880 5901840 ) ( 2989840 * )
+      NEW Metal2 ( 2980880 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 2989840 654300 ) ( * 5901840 )
+      NEW Metal5 ( 2989840 654300 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 648900 ) ( * 654300 )
+      NEW Metal5 ( 5493600 648900 ) ( 5714800 * )
+      NEW Metal4 ( 5714800 648900 ) Via4_VH
+      NEW Metal3 ( 5714800 647920 ) Via3_HV
+      NEW Metal3 ( 2989840 5901840 ) Via3_HV
+      NEW Metal2 ( 2980880 5901840 ) Via2_VH
+      NEW Metal4 ( 2989840 654300 ) Via4_VH ;
+    - io_out[1] ( PIN io_out[1] ) + USE SIGNAL ;
+    - io_out[20] ( PIN io_out[20] ) ( mprj io_out[2] ) + USE SIGNAL
+      + ROUTED Metal5 ( 5714800 1106100 ) ( * 1107900 )
+      NEW Metal4 ( 5714800 1104880 ) ( * 1106100 )
+      NEW Metal3 ( 5714800 1101520 0 ) ( * 1104880 )
+      NEW Metal3 ( 2313360 5901840 ) ( 2316720 * )
+      NEW Metal2 ( 2316720 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 2313360 1107900 ) ( * 5901840 )
+      NEW Metal5 ( 2313360 1107900 ) ( 5714800 * )
+      NEW Metal4 ( 5714800 1106100 ) Via4_VH
+      NEW Metal3 ( 5714800 1104880 ) Via3_HV
+      NEW Metal3 ( 2313360 5901840 ) Via3_HV
+      NEW Metal2 ( 2316720 5901840 ) Via2_VH
+      NEW Metal4 ( 2313360 1107900 ) Via4_VH ;
+    - io_out[21] ( PIN io_out[21] ) ( mprj io_out[3] ) + USE SIGNAL
+      + ROUTED Metal3 ( 1657040 5901840 ) ( 1662640 * )
+      NEW Metal2 ( 1657040 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 1662640 1561500 ) ( * 5901840 )
+      NEW Metal4 ( 5712560 1560720 ) ( * 1561500 )
+      NEW Metal5 ( 1662640 1561500 ) ( 5712560 * )
+      NEW Metal3 ( 1662640 5901840 ) Via3_HV
+      NEW Metal2 ( 1657040 5901840 ) Via2_VH
+      NEW Metal4 ( 1662640 1561500 ) Via4_VH
+      NEW Metal4 ( 5712560 1561500 ) Via4_VH
+      NEW Metal3 ( 5712560 1560720 ) Via3_HV ;
+    - io_out[22] ( PIN io_out[22] ) ( mprj io_out[4] ) + USE SIGNAL
+      + ROUTED Metal3 ( 995120 5901840 ) ( 1007440 * )
+      NEW Metal2 ( 995120 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 1007440 2031300 ) ( * 5901840 )
+      NEW Metal4 ( 5714800 2025520 ) ( * 2025900 )
+      NEW Metal3 ( 5714800 2019920 0 ) ( * 2025520 )
+      NEW Metal5 ( 1007440 2031300 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 2025900 ) ( * 2031300 )
+      NEW Metal5 ( 5493600 2025900 ) ( 5714800 * )
+      NEW Metal3 ( 1007440 5901840 ) Via3_HV
+      NEW Metal2 ( 995120 5901840 ) Via2_VH
+      NEW Metal4 ( 1007440 2031300 ) Via4_VH
+      NEW Metal4 ( 5714800 2025900 ) Via4_VH
+      NEW Metal3 ( 5714800 2025520 ) Via3_HV ;
+    - io_out[23] ( PIN io_out[23] ) ( mprj io_out[5] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5714800 2483600 ) ( * 2484900 )
+      NEW Metal3 ( 5714800 2479120 0 ) ( * 2483600 )
+      NEW Metal2 ( 333200 5901840 ) ( * 5956720 0 )
+      NEW Metal4 ( 333200 5846400 ) ( * 5901840 )
+      NEW Metal4 ( 333200 5846400 ) ( 335440 * )
+      NEW Metal4 ( 335440 2484900 ) ( * 5846400 )
+      NEW Metal5 ( 335440 2484900 ) ( 5714800 * )
+      NEW Metal4 ( 5714800 2484900 ) Via4_VH
+      NEW Metal3 ( 5714800 2483600 ) Via3_HV
+      NEW Metal2 ( 333200 5901840 ) Via2_VH
+      NEW Metal3 ( 333200 5901840 ) Via3_HV
+      NEW Metal4 ( 335440 2484900 ) Via4_VH
+      NEW Metal3 ( 333200 5901840 ) RECT ( -660 -280 0 280 )  ;
+    - io_out[24] ( PIN io_out[24] ) ( mprj io_out[6] ) + USE SIGNAL
+      + ROUTED Metal3 ( 42000 2939440 ) ( 49840 * )
+      NEW Metal4 ( 49840 2931300 ) ( * 2939440 )
+      NEW Metal3 ( 34160 3461360 ) ( 42000 * )
+      NEW Metal2 ( 42000 2939440 ) ( * 3461360 )
+      NEW Metal3 ( 3920 5730480 0 ) ( 34160 * )
+      NEW Metal4 ( 34160 3461360 ) ( * 5730480 )
+      NEW Metal4 ( 5714800 2933100 ) ( * 2933840 )
+      NEW Metal3 ( 5714800 2933840 ) ( * 2938320 0 )
+      NEW Metal5 ( 49840 2931300 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 2931300 ) ( * 2933100 )
+      NEW Metal5 ( 5493600 2933100 ) ( 5714800 * )
+      NEW Metal2 ( 42000 2939440 ) Via2_VH
+      NEW Metal3 ( 49840 2939440 ) Via3_HV
+      NEW Metal4 ( 49840 2931300 ) Via4_VH
+      NEW Metal3 ( 34160 3461360 ) Via3_HV
+      NEW Metal2 ( 42000 3461360 ) Via2_VH
+      NEW Metal3 ( 34160 5730480 ) Via3_HV
+      NEW Metal4 ( 5714800 2933100 ) Via4_VH
+      NEW Metal3 ( 5714800 2933840 ) Via3_HV ;
+    - io_out[25] ( PIN io_out[25] ) ( mprj io_out[7] ) + USE SIGNAL
+      + ROUTED Metal4 ( 5712560 3305680 ) ( * 3305700 )
+      NEW Metal3 ( 3920 5307120 0 ) ( 48720 * )
+      NEW Metal4 ( 48720 3309300 ) ( * 5307120 )
+      NEW Metal5 ( 48720 3309300 ) ( 5493600 * )
+      NEW Metal5 ( 5493600 3305700 ) ( * 3309300 )
+      NEW Metal5 ( 5493600 3305700 ) ( 5712560 * )
+      NEW Metal4 ( 48720 3309300 ) Via4_VH
+      NEW Metal4 ( 5712560 3305700 ) Via4_VH
+      NEW Metal3 ( 5712560 3305680 ) Via3_HV
+      NEW Metal3 ( 48720 5307120 ) Via3_HV
+      NEW Metal4 ( 5712560 3305700 ) RECT ( -280 0 280 640 )  ;
+    - io_out[26] ( PIN io_out[26] ) ( mprj io_out[8] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 4883760 0 ) ( 40880 * )
+      NEW Metal4 ( 40880 3312400 ) ( * 4883760 )
+      NEW Metal3 ( 40880 3312400 ) ( 120400 * 0 )
+      NEW Metal3 ( 40880 3312400 ) Via3_HV
+      NEW Metal3 ( 40880 4883760 ) Via3_HV ;
+    - io_out[27] ( PIN io_out[27] ) ( mprj io_out[9] ) + USE SIGNAL
+      + ROUTED Metal3 ( 3920 4460400 0 ) ( 39760 * )
+      NEW Metal4 ( 39760 2703120 ) ( * 4460400 )
+      NEW Metal3 ( 39760 2703120 ) ( 120400 * 0 )
+      NEW Metal3 ( 39760 4460400 ) Via3_HV
+      NEW Metal3 ( 39760 2703120 ) Via3_HV ;
     - io_out[28] ( PIN io_out[28] ) + USE SIGNAL ;
     - io_out[29] ( PIN io_out[29] ) + USE SIGNAL ;
-    - io_out[2] ( PIN io_out[2] ) ( mprj io_out[2] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5754000 996240 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 1240400 0 ) ( 5754000 * )
-      NEW Metal4 ( 5754000 996240 ) ( * 1240400 )
-      NEW Metal3 ( 5754000 996240 ) Via3_HV
-      NEW Metal3 ( 5754000 1240400 ) Via3_HV ;
+    - io_out[2] ( PIN io_out[2] ) + USE SIGNAL ;
     - io_out[30] ( PIN io_out[30] ) + USE SIGNAL ;
     - io_out[31] ( PIN io_out[31] ) + USE SIGNAL ;
     - io_out[32] ( PIN io_out[32] ) + USE SIGNAL ;
@@ -5852,51 +6252,13 @@ NETS 416 ;
     - io_out[35] ( PIN io_out[35] ) + USE SIGNAL ;
     - io_out[36] ( PIN io_out[36] ) + USE SIGNAL ;
     - io_out[37] ( PIN io_out[37] ) + USE SIGNAL ;
-    - io_out[3] ( PIN io_out[3] ) ( mprj io_out[3] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5754000 1392720 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 1679440 0 ) ( 5754000 * )
-      NEW Metal4 ( 5754000 1392720 ) ( * 1679440 )
-      NEW Metal3 ( 5754000 1392720 ) Via3_HV
-      NEW Metal3 ( 5754000 1679440 ) Via3_HV ;
-    - io_out[4] ( PIN io_out[4] ) ( mprj io_out[4] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5719280 2118480 0 ) ( 5754000 * )
-      NEW Metal3 ( 5754000 1789200 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5754000 1789200 ) ( * 2118480 )
-      NEW Metal3 ( 5754000 2118480 ) Via3_HV
-      NEW Metal3 ( 5754000 1789200 ) Via3_HV ;
-    - io_out[5] ( PIN io_out[5] ) ( mprj io_out[5] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5754000 2185680 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 2557520 0 ) ( 5754000 * )
-      NEW Metal4 ( 5754000 2185680 ) ( * 2557520 )
-      NEW Metal3 ( 5754000 2185680 ) Via3_HV
-      NEW Metal3 ( 5754000 2557520 ) Via3_HV ;
-    - io_out[6] ( PIN io_out[6] ) ( mprj io_out[6] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5755120 2582160 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 2996560 0 ) ( 5755120 * )
-      NEW Metal4 ( 5755120 2582160 ) ( * 2996560 )
-      NEW Metal3 ( 5755120 2582160 ) Via3_HV
-      NEW Metal3 ( 5755120 2996560 ) Via3_HV ;
-    - io_out[7] ( PIN io_out[7] ) ( mprj io_out[7] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5754000 2978640 ) ( 5956720 * 0 )
-      NEW Metal3 ( 5719280 3435600 0 ) ( 5754000 * )
-      NEW Metal4 ( 5754000 2978640 ) ( * 3435600 )
-      NEW Metal3 ( 5754000 2978640 ) Via3_HV
-      NEW Metal3 ( 5754000 3435600 ) Via3_HV ;
-    - io_out[8] ( PIN io_out[8] ) ( mprj io_out[8] ) + USE SIGNAL
-      + ROUTED Metal3 ( 5909680 3375120 ) ( 5956720 * 0 )
-      NEW Metal4 ( 5909680 2796300 ) ( * 3375120 )
-      NEW Metal4 ( 127120 2792720 ) ( * 2796300 )
-      NEW Metal5 ( 127120 2796300 ) ( 5909680 * )
-      NEW Metal4 ( 5909680 2796300 ) Via4_VH
-      NEW Metal3 ( 5909680 3375120 ) Via3_HV
-      NEW Metal3 ( 127120 2792720 ) Via3_HV
-      NEW Metal4 ( 127120 2796300 ) Via4_VH ;
-    - io_out[9] ( PIN io_out[9] ) ( mprj io_out[9] ) + USE SIGNAL
-      + ROUTED Metal3 ( 90160 3771600 ) ( 5956720 * 0 )
-      NEW Metal3 ( 90160 1789200 ) ( 120400 * 0 )
-      NEW Metal4 ( 90160 1789200 ) ( * 3771600 )
-      NEW Metal3 ( 90160 3771600 ) Via3_HV
-      NEW Metal3 ( 90160 1789200 ) Via3_HV ;
+    - io_out[3] ( PIN io_out[3] ) + USE SIGNAL ;
+    - io_out[4] ( PIN io_out[4] ) + USE SIGNAL ;
+    - io_out[5] ( PIN io_out[5] ) + USE SIGNAL ;
+    - io_out[6] ( PIN io_out[6] ) + USE SIGNAL ;
+    - io_out[7] ( PIN io_out[7] ) + USE SIGNAL ;
+    - io_out[8] ( PIN io_out[8] ) + USE SIGNAL ;
+    - io_out[9] ( PIN io_out[9] ) + USE SIGNAL ;
     - la_data_in[0] ( PIN la_data_in[0] ) + USE SIGNAL ;
     - la_data_in[10] ( PIN la_data_in[10] ) + USE SIGNAL ;
     - la_data_in[11] ( PIN la_data_in[11] ) + USE SIGNAL ;
