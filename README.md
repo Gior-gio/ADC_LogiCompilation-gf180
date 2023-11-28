@@ -4,7 +4,7 @@
 
 ## Project Description:
 
-Compilation of three different ADC digital logics for GFMPW-1. TThe simplified input/output schematic is as follows:
+Compilation of three different ADC digital logics for GFMPW-1. The simplified input/output schematic is as follows:
 
 ![Schematic](Media_README/Schematic.png)
 
